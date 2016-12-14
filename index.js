@@ -1,8 +1,12 @@
+//Edit this url to point to your mongo db!
+var mongoUrl = 'mongodb://localhost:27017/test';
+
+
+
 var MongoClient = require("mongodb").MongoClient;
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');
 
-var mongoUrl = 'mongodb://localhost:27017/test';
 
 async(function () {
     try {
