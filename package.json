@@ -1,0 +1,10 @@
+{
+  "name": "mongo-log",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "Private",
+  "dependencies": {
+    "asyncawait": "^1.0.6",
+    "mongodb": "^2.2.16"
+  }
+}
