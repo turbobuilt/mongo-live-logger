@@ -7,7 +7,7 @@ I wrote this because I wanted a live stream of mongodb queries.
 First you need to tell mongo to log all your queries.
 To do this, open up a mongo shell, and run the following commands
 ```
-use dbName
+use YOUR_DB_NAME
 db.setProfilingLevel(2)
 ```
 
@@ -20,7 +20,7 @@ yarn
 npm install
 ```
 
-##THEN YOU NEED TO EDIT THE CONNECTION URL IN INDEX.JS to be whatever you need.
+##THEN YOU NEED TO EDIT THE CONNECTION URL IN INDEX.JS TO POINT TO YOUR DATABASE.
 
 To run, just cd into the directory and do
 
