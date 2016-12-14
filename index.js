@@ -13,6 +13,11 @@ async(function () {
         console.log("using connection URL: " + mongoUrl);
         console.log("If this is wrong, change it in index.js.  If your not seeing anything probaly need to change it")
         var dbCon = await(MongoClient.connect(mongoUrl));
+        process.on('SIGINT', function () { //Should I do this ?
+            dbCon.close();
+            console.log('Closed Database Connection');
+            process.exit();
+        })
         var Profile = dbCon.collection('system.profile');
         var items;
         var lastTime = new Date();
