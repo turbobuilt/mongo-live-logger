@@ -2,10 +2,12 @@ var MongoClient = require("mongodb").MongoClient;
 var async = require('asyncawait/async');
 var await = require('asyncawait/await');
 
-var mongoUrl = 'mongodb://localhost:3001/meteor';
+var mongoUrl = 'mongodb://localhost:27017/test';
 
 async(function () {
     try {
+        console.log("using connection URL: " + mongoUrl);
+        console.log("If this is wrong, change it in index.js.  If your not seeing anything probaly need to change it")
         var dbCon = await(MongoClient.connect(mongoUrl));
         var Profile = dbCon.collection('system.profile');
         var items;
