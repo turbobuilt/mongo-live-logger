@@ -1,26 +1,25 @@
-#Log mongodb queries in real time
-
+# Log mongodb queries in real time
 I wrote this because I wanted a live stream of mongodb queries.
 
-##TO MAKE IT WORK READ THIS!
 
-First you need to tell mongo to log all your queries.
-To do this, open up a mongo shell, and run the following commands
+
+## TO MAKE IT WORK READ THIS!
+
+First, you need to tell mongo to log all your queries.
+To do this, open up a mongo shell (usually by typing 'mongo' into the command line), and run the following commands
 ```
 use YOUR_DB_NAME
 db.setProfilingLevel(2)
 ```
 
-Also, of course you need to install dependencies.  I used yarn for this (improved npm), but npm should work.
-
+Second clone the repo, and then install dependencies:
 ```
-//if you have yarn
-yarn
-//if you still use npm, I think this will work
+git clone https://github.com/dtruel/mongo-live-logger
+cd mongo-live-logger
 npm install
 ```
 
-##THEN YOU NEED TO EDIT THE CONNECTION URL IN INDEX.JS TO POINT TO YOUR DATABASE.
+Third, YOU NEED TO EDIT THE CONNECTION URL IN INDEX.JS TO POINT TO YOUR DATABASE.
 
 To run, just cd into the directory and do
 
